@@ -1,0 +1,28 @@
+{
+    "project": "Pharmacovigilance & ADE Detector",
+    "evaluation_type": "Final RAG Evaluation",
+    "retrieval_evaluation": {
+        "test_queries": 3,
+        "successful_queries": 3,
+        "average_relevance_rate": 63.3
+    },
+    "generation_evaluation": {
+        "average_claim_support": 56.9,
+        "average_citation_coverage": 33.05,
+        "average_citation_validity": 100.0,
+        "average_ade_grounding": 100.0,
+        "average_grounding_score": 68.18
+    },
+    "final_score": {
+        "overall_evaluation_score": 69.22,
+        "system_evaluation_level": "Moderate"
+    },
+    "component_performance": {
+        "retrieval_relevance": 63.3,
+        "claim_support": 56.9,
+        "citation_coverage": 33.05,
+        "citation_validity": 100.0,
+        "ade_grounding": 100.0,
+        "overall_grounding": 68.18
+    }
+}

@@ -1,0 +1,13 @@
+pandas
+numpy
+requests
+python-dotenv
+sentence-transformers
+transformers
+torch
+weaviate-client
+scikit-learn
+rank-bm25
+streamlit
+langchain
+langchain-community

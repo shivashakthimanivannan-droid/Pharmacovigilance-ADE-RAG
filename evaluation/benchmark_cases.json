@@ -1,0 +1,15 @@
+{
+  "dataset_name": "Pharmacovigilance grounding synthetic smoke benchmark v1",
+  "provenance": "Hand-authored synthetic examples, NOT independent clinician-annotated evidence and NOT a clinical validation set.",
+  "cases": [
+    {"id":"supported_numeric","expected":"supported","claim":"Combination therapy increased major bleeding (RR 1.58) (PMID:10001).","documents":[{"source":"PubMed","pmid":"10001","title":"Synthetic randomized trial","text":"Combination therapy increased major bleeding compared with monotherapy (RR 1.58)."}]},
+    {"id":"contradicted_direction","expected":"contradicted","claim":"Combination therapy decreased major bleeding (PMID:10002).","documents":[{"source":"PubMed","pmid":"10002","title":"Synthetic randomized trial","text":"Combination therapy increased major bleeding compared with monotherapy."}]},
+    {"id":"insufficient_outcome","expected":"insufficient_evidence","claim":"Combination therapy reduced all-cause mortality (PMID:10003).","documents":[{"source":"PubMed","pmid":"10003","title":"Synthetic trial","text":"The study compared combination therapy with monotherapy and assessed bleeding outcomes only."}]},
+    {"id":"invalid_citation","expected":"invalid_citation","claim":"Combination therapy increased bleeding (PMID:99999).","documents":[{"source":"PubMed","pmid":"10004","title":"Synthetic study","text":"Combination therapy increased bleeding."}]},
+    {"id":"faers_causality","expected":"unsupported","claim":"Warfarin and aspirin caused hemorrhage (FAERS-CASE:20001).","documents":[{"source":"FAERS","case_id":"20001","text":"CASEID: 20001 DRUGNAME: WARFARIN; ASPIRIN PT: Haemorrhage"}]},
+    {"id":"unsupported_number","expected":"unsupported","claim":"Combination therapy had RR 9.99 for major bleeding (PMID:10005).","documents":[{"source":"PubMed","pmid":"10005","title":"Synthetic study","text":"Combination therapy had RR 1.58 for major bleeding."}]},
+    {"id":"faers_coreport","expected":"supported","claim":"A spontaneous report listed warfarin, aspirin, and haemorrhage (FAERS-CASE:20002).","documents":[{"source":"FAERS","case_id":"20002","text":"CASEID: 20002 DRUGNAME: WARFARIN; ASPIRIN PT: Haemorrhage"}]},
+    {"id":"uncited_clinical","expected":"uncited","claim":"Combining warfarin and aspirin increases bleeding risk.","documents":[{"source":"PubMed","pmid":"10006","title":"Synthetic trial","text":"The study evaluated bleeding outcomes."}]},
+    {"id":"methodological_disclaimer","expected":"methodological_disclaimer","claim":"FAERS spontaneous reports do not establish causality or incidence.","documents":[{"source":"FAERS","case_id":"20003","text":"CASEID: 20003 DRUGNAME: WARFARIN PT: Haemorrhage"}]}
+  ]
+}

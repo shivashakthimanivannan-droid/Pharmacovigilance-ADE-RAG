@@ -1,0 +1,453 @@
+{
+    "project": "Pharmacovigilance & Adverse Drug Event RAG System",
+    "evaluation_type": "End-to-end RAG evaluation",
+    "evaluation_queries": [
+        {
+            "id": "Q1",
+            "query": "What are the risks of combining warfarin with aspirin?"
+        },
+        {
+            "id": "Q2",
+            "query": "What adverse events are associated with anticoagulant therapy?"
+        },
+        {
+            "id": "Q3",
+            "query": "What are the safety concerns related to gastrointestinal bleeding?"
+        }
+    ],
+    "aggregate_metrics": {
+        "queries_evaluated": 3,
+        "successful_queries": 3,
+        "retrieval_success_rate": 100.0,
+        "generation_success_rate": 100.0,
+        "average_retrieval_score": 100.0,
+        "average_generation_score": 100.0,
+        "average_citation_validity": 100.0,
+        "average_grounding_score": 100.0,
+        "average_source_coverage": 100.0,
+        "average_structure_score": 100.0,
+        "overall_score": 100.0
+    },
+    "query_results": [
+        {
+            "query_id": "Q1",
+            "query": "What are the risks of combining warfarin with aspirin?",
+            "status": "SUCCESS",
+            "retrieval": {
+                "total_documents": 10,
+                "pubmed_documents": 5,
+                "faers_documents": 5,
+                "total_success": true,
+                "pubmed_balance_success": true,
+                "faers_balance_success": true,
+                "retrieval_score": 100.0
+            },
+            "generation": {
+                "generation_success": true,
+                "answer_length": 2529,
+                "generation_score": 100.0
+            },
+            "citations": {
+                "generated_citations": [
+                    "FAERS-CASE:25562806",
+                    "FAERS-CASE:26537206",
+                    "FAERS-CASE:26634608",
+                    "FAERS-CASE:26765351",
+                    "FAERS-CASE:26777212",
+                    "PMID:41765450",
+                    "PMID:42232312",
+                    "PMID:42536002",
+                    "PMID:42628015"
+                ],
+                "retrieved_citations": [
+                    "FAERS-CASE:25562806",
+                    "FAERS-CASE:26537206",
+                    "FAERS-CASE:26634608",
+                    "FAERS-CASE:26765351",
+                    "FAERS-CASE:26777212",
+                    "PMID:41765450",
+                    "PMID:42232312",
+                    "PMID:42264104",
+                    "PMID:42536002",
+                    "PMID:42628015"
+                ],
+                "valid_citations": [
+                    "FAERS-CASE:25562806",
+                    "FAERS-CASE:26537206",
+                    "FAERS-CASE:26634608",
+                    "FAERS-CASE:26765351",
+                    "FAERS-CASE:26777212",
+                    "PMID:41765450",
+                    "PMID:42232312",
+                    "PMID:42536002",
+                    "PMID:42628015"
+                ],
+                "invalid_citations": [],
+                "citation_validity": 100.0
+            },
+            "grounding": {
+                "grounded_citations": 9,
+                "total_generated_citations": 9,
+                "grounding_score": 100.0
+            },
+            "source_coverage": {
+                "pubmed_evidence_available": true,
+                "faers_evidence_available": true,
+                "pubmed_citation_present": true,
+                "faers_citation_present": true,
+                "source_coverage_score": 100.0
+            },
+            "answer_structure": {
+                "summary_present": true,
+                "evidence_present": true,
+                "limitations_present": true,
+                "faers_section_present": true,
+                "structure_score": 100.0
+            },
+            "overall_score": 100.0,
+            "answer": "Summary:\nCombining warfarin with aspirin involves risks of bleeding complications and altered drug levels, although it is sometimes utilized in high-risk patient populations for thrombotic prevention. \n\nEvidence:\n- In a retrospective study of chronic subdural hematomas, the combination of warfarin and aspirin (along with warfarin alone or aspirin alone) was evaluated as an antithrombotic exposure group, and warfarin use was associated with a shorter post-traumatic interval and other severe neurosurgical complications (PMID:41765450).\n- An analysis of atrial fibrillation patients undergoing percutaneous coronary intervention found that triple therapy including clopidogrel, aspirin, and warfarin was associated with an overall bleeding incidence of 35.62%, with factors like aging, low body mass index, and alcohol consumption influencing bleeding risks (PMID:42232312).\n- Conversely, some studies in specific patient groups, such as those with high-risk Fontan circulation or left ventricular assist devices, report that warfarin combined with aspirin was implemented without unexpected thrombotic events or that omitting aspirin did not significantly alter major hemocompatibility-related adverse event rates compared to warfarin plus aspirin (PMID:42536002, PMID:42628015).\n\nFAERS Signals:\n- FAERS reports describing patients receiving warfarin and aspirin include adverse events such as gastrointestinal hemorrhage, colitis, and small intestinal obstruction (FAERS-CASE:26537206).\n- Other FAERS cases involving patients treated with warfarin and aspirin describe events such as drug interactions, hemorrhagic diathesis, increased international normalized ratio (INR), anticoagulation drug level above therapeutic, and urinary tract hemorrhage (FAERS-CASE:26765351, FAERS-CASE:26777212). Additional complex case reports list numerous concurrent medications and symptoms including deep vein thrombosis, pulmonary embolism, haematochezia, and rectal haemorrhage (FAERS-CASE:26634608, FAERS-CASE:25562806).\n\nLimitations:\n- Some evidence relies on spontaneous reporting systems (FAERS), which represent unverified safety reports and do not automatically prove causality.\n- Other evidence comes from retrospective observational studies and secondary analyses of clinical trials, which may have limited sample sizes or confounding factors.\n\nCitations:\n- PMID:41765450\n- PMID:42232312\n- PMID:42536002\n- PMID:42628015\n- FAERS-CASE:26537206\n- FAERS-CASE:26765351\n- FAERS-CASE:26777212\n- FAERS-CASE:26634608\n- FAERS-CASE:25562806",
+            "retrieved_documents": [
+                {
+                    "source": "faers",
+                    "citation": "FAERS-CASE:26537206",
+                    "title": "",
+                    "score": null
+                },
+                {
+                    "source": "pubmed",
+                    "citation": "PMID:42536002",
+                    "title": "Warfarin-Aspirin Therapy in Congenitally Corrected Transposition of the Great Arteries After Lateral Tunnel Fontan.",
+                    "score": null
+                },
+                {
+                    "source": "faers",
+                    "citation": "FAERS-CASE:26765351",
+                    "title": "",
+                    "score": null
+                },
+                {
+                    "source": "pubmed",
+                    "citation": "PMID:42264104",
+                    "title": "Aspirin Is Associated With Improved Venous Thromboembolism Prophylaxis Compared With Anticoagulants After Total Hip Arthroplasty in Patients Who Have Prior Hematologic Malignancy.",
+                    "score": null
+                },
+                {
+                    "source": "pubmed",
+                    "citation": "PMID:42628015",
+                    "title": "Real-World Hemocompatibility Outcomes With Aspirin Omission in a Novel Fully Magnetically Levitated Left Ventricular Assist Device.",
+                    "score": null
+                },
+                {
+                    "source": "pubmed",
+                    "citation": "PMID:42232312",
+                    "title": "Risk factors of bleeding in patients with atrial fibrillation undergoing percutaneous coronary intervention: an analysis from the MANJUSRI study.",
+                    "score": null
+                },
+                {
+                    "source": "pubmed",
+                    "citation": "PMID:41765450",
+                    "title": "Warfarin-associated Chronic Subdural Hematomas May Exhibit a Shorter Post-traumatic Interval: An Observational Study.",
+                    "score": null
+                },
+                {
+                    "source": "faers",
+                    "citation": "FAERS-CASE:26634608",
+                    "title": "",
+                    "score": null
+                },
+                {
+                    "source": "faers",
+                    "citation": "FAERS-CASE:25562806",
+                    "title": "",
+                    "score": null
+                },
+                {
+                    "source": "faers",
+                    "citation": "FAERS-CASE:26777212",
+                    "title": "",
+                    "score": null
+                }
+            ]
+        },
+        {
+            "query_id": "Q2",
+            "query": "What adverse events are associated with anticoagulant therapy?",
+            "status": "SUCCESS",
+            "retrieval": {
+                "total_documents": 10,
+                "pubmed_documents": 5,
+                "faers_documents": 5,
+                "total_success": true,
+                "pubmed_balance_success": true,
+                "faers_balance_success": true,
+                "retrieval_score": 100.0
+            },
+            "generation": {
+                "generation_success": true,
+                "answer_length": 1720,
+                "generation_score": 100.0
+            },
+            "citations": {
+                "generated_citations": [
+                    "FAERS-CASE:26651584",
+                    "FAERS-CASE:26747739",
+                    "FAERS-CASE:26797172",
+                    "FAERS-CASE:26831091",
+                    "FAERS-CASE:26891796",
+                    "PMID:42825528",
+                    "PMID:42826568",
+                    "PMID:42827284"
+                ],
+                "retrieved_citations": [
+                    "FAERS-CASE:26651584",
+                    "FAERS-CASE:26747739",
+                    "FAERS-CASE:26797172",
+                    "FAERS-CASE:26831091",
+                    "FAERS-CASE:26891796",
+                    "PMID:42823212",
+                    "PMID:42825528",
+                    "PMID:42826568",
+                    "PMID:42827284",
+                    "PMID:42830154"
+                ],
+                "valid_citations": [
+                    "FAERS-CASE:26651584",
+                    "FAERS-CASE:26747739",
+                    "FAERS-CASE:26797172",
+                    "FAERS-CASE:26831091",
+                    "FAERS-CASE:26891796",
+                    "PMID:42825528",
+                    "PMID:42826568",
+                    "PMID:42827284"
+                ],
+                "invalid_citations": [],
+                "citation_validity": 100.0
+            },
+            "grounding": {
+                "grounded_citations": 8,
+                "total_generated_citations": 8,
+                "grounding_score": 100.0
+            },
+            "source_coverage": {
+                "pubmed_evidence_available": true,
+                "faers_evidence_available": true,
+                "pubmed_citation_present": true,
+                "faers_citation_present": true,
+                "source_coverage_score": 100.0
+            },
+            "answer_structure": {
+                "summary_present": true,
+                "evidence_present": true,
+                "limitations_present": true,
+                "faers_section_present": true,
+                "structure_score": 100.0
+            },
+            "overall_score": 100.0,
+            "answer": "Summary:\nAnticoagulant therapy is associated with bleeding and hemorrhagic complications, as well as potential drug-drug interactions. \n\nEvidence:\n- Nafamostat mesilate has been used as an anticoagulant in patients experiencing bleeding or heparin-related adverse effects during extracorporeal circulatory support PMID:42827284.\n- In cancer patients with atrial fibrillation, anticoagulation management considers hemorrhagic risk, thrombocytopenia, and drug-drug interactions PMID:42825528.\n- Contemporary anticoagulation management strategies for pulmonary embolism require consideration of the bleeding phenotype, dose intensity, and drug interactions PMID:42826568.\n\nFAERS Signals:\n- The FAERS database contains reports of adverse events, drug interactions, spinal epidural haematoma, epistaxis, gastrointestinal haemorrhage, haematoma, haematuria, haemoptysis, haemorrhage, intracranial haemorrhage, pericardial haemorrhage, rectal haemorrhage, and lower gastrointestinal haemorrhage associated with anticoagulant treatments (such as apixaban, dabigatran, edoxaban, enoxaparin, and rivaroxaban) FAERS-CASE:26651584, FAERS-CASE:26747739, FAERS-CASE:26891796, FAERS-CASE:26797172, FAERS-CASE:26831091.\n\nLimitations:\n- Evidence guiding anticoagulation in certain populations (such as cancer patients) derives largely from post hoc analyses and observational studies rather than dedicated randomized controlled trials PMID:42825528.\n- FAERS data represents spontaneous safety reports and should not automatically be interpreted as proof of causality.\n\nCitations:\n- PMID:42827284\n- PMID:42825528\n- PMID:42826568\n- FAERS-CASE:26651584\n- FAERS-CASE:26747739\n- FAERS-CASE:26891796\n- FAERS-CASE:26797172\n- FAERS-CASE:26831091",
+            "retrieved_documents": [
+                {
+                    "source": "pubmed",
+                    "citation": "PMID:42827284",
+                    "title": "Change in Anticoagulant Strategy During IMPELLA Support and Improved Outcomes.",
+                    "score": null
+                },
+                {
+                    "source": "pubmed",
+                    "citation": "PMID:42825528",
+                    "title": "Anticoagulation in cancer patients with atrial fibrillation: recent advances.",
+                    "score": null
+                },
+                {
+                    "source": "pubmed",
+                    "citation": "PMID:42826568",
+                    "title": "Contemporary anticoagulation management in pulmonary embolism.",
+                    "score": null
+                },
+                {
+                    "source": "faers",
+                    "citation": "FAERS-CASE:26651584",
+                    "title": "",
+                    "score": null
+                },
+                {
+                    "source": "faers",
+                    "citation": "FAERS-CASE:26747739",
+                    "title": "",
+                    "score": null
+                },
+                {
+                    "source": "pubmed",
+                    "citation": "PMID:42830154",
+                    "title": "Left Atrial Appendage Occlusion Among Cancer Patients with Atrial Fibrillation: a systematic review and update meta-analysis.",
+                    "score": null
+                },
+                {
+                    "source": "faers",
+                    "citation": "FAERS-CASE:26891796",
+                    "title": "",
+                    "score": null
+                },
+                {
+                    "source": "pubmed",
+                    "citation": "PMID:42823212",
+                    "title": "[Feasibility and safety of a \"Fast-Track\" same-day discharge protocol following percutaneous left atrial appendage closure: A prospective single-center study].",
+                    "score": null
+                },
+                {
+                    "source": "faers",
+                    "citation": "FAERS-CASE:26797172",
+                    "title": "",
+                    "score": null
+                },
+                {
+                    "source": "faers",
+                    "citation": "FAERS-CASE:26831091",
+                    "title": "",
+                    "score": null
+                }
+            ]
+        },
+        {
+            "query_id": "Q3",
+            "query": "What are the safety concerns related to gastrointestinal bleeding?",
+            "status": "SUCCESS",
+            "retrieval": {
+                "total_documents": 10,
+                "pubmed_documents": 5,
+                "faers_documents": 5,
+                "total_success": true,
+                "pubmed_balance_success": true,
+                "faers_balance_success": true,
+                "retrieval_score": 100.0
+            },
+            "generation": {
+                "generation_success": true,
+                "answer_length": 2604,
+                "generation_score": 100.0
+            },
+            "citations": {
+                "generated_citations": [
+                    "FAERS-CASE:26537206",
+                    "FAERS-CASE:26658933",
+                    "FAERS-CASE:26841622",
+                    "FAERS-CASE:26846395",
+                    "FAERS-CASE:26891796",
+                    "PMID:42831044",
+                    "PMID:42831646",
+                    "PMID:42831954",
+                    "PMID:42832398",
+                    "PMID:42833283"
+                ],
+                "retrieved_citations": [
+                    "FAERS-CASE:26537206",
+                    "FAERS-CASE:26658933",
+                    "FAERS-CASE:26841622",
+                    "FAERS-CASE:26846395",
+                    "FAERS-CASE:26891796",
+                    "PMID:42831044",
+                    "PMID:42831646",
+                    "PMID:42831954",
+                    "PMID:42832398",
+                    "PMID:42833283"
+                ],
+                "valid_citations": [
+                    "FAERS-CASE:26537206",
+                    "FAERS-CASE:26658933",
+                    "FAERS-CASE:26841622",
+                    "FAERS-CASE:26846395",
+                    "FAERS-CASE:26891796",
+                    "PMID:42831044",
+                    "PMID:42831646",
+                    "PMID:42831954",
+                    "PMID:42832398",
+                    "PMID:42833283"
+                ],
+                "invalid_citations": [],
+                "citation_validity": 100.0
+            },
+            "grounding": {
+                "grounded_citations": 10,
+                "total_generated_citations": 10,
+                "grounding_score": 100.0
+            },
+            "source_coverage": {
+                "pubmed_evidence_available": true,
+                "faers_evidence_available": true,
+                "pubmed_citation_present": true,
+                "faers_citation_present": true,
+                "source_coverage_score": 100.0
+            },
+            "answer_structure": {
+                "summary_present": true,
+                "evidence_present": true,
+                "limitations_present": true,
+                "faers_section_present": true,
+                "structure_score": 100.0
+            },
+            "overall_score": 100.0,
+            "answer": "Summary:\nSafety concerns related to gastrointestinal bleeding include prognostic indicators such as blood urea nitrogen (BUN) trajectories in critically ill patients, associated complications in specific populations (such as patients on left ventricular assist device support or undergoing procedures like transcatheter aortic valve implantation and percutaneous coronary intervention), and events reported in spontaneous pharmacovigilance databases involving various antithrombotic and anti-inflammatory medications.\n\nEvidence:\n- Elevated blood urea nitrogen (BUN) and its temporal trajectories are associated with adverse outcomes in critically ill patients with gastrointestinal bleeding, where sustained higher BUN levels increase mortality odds [PMID:42831954].\n- In patients with cirrhosis, guidelines recommend short-course antibiotic prophylaxis for upper gastrointestinal bleeding [PMID:42831646].\n- Mucosal bleeding and angiodysplasia-originating bleeding are common complications in patients on left ventricular assist device (LVAD) support, potentially contributed to by hemolysis and RBC-mediated procoagulant activity [PMID:42832398].\n- In patients undergoing transcatheter aortic valve implantation, routine percutaneous coronary intervention was associated with an increased posterior probability of harm for major bleeding and life-threatening or disabling bleeding [PMID:42831044].\n- EUS-guided angiotherapy with cyanoacrylate injection has been reported as a treatment for refractory malignant gastrointestinal hemorrhage [PMID:42833283].\n\nFAERS Signals:\n- Spontaneous FAERS reports describe upper gastrointestinal haemorrhage and melaena in patients receiving drugs such as diclofenac, naproxen, and enalapril [FAERS-CASE:26841622].\n- Spontaneous FAERS reports also describe upper gastrointestinal haemorrhage in patients receiving medications including diclofenac, naproxen, and omeprazole [FAERS-CASE:26658933].\n- Gastrointestinal haemorrhage was reported in FAERS cases involving the concomitant use of direct oral anticoagulants and triazole antifungals [FAERS-CASE:26891796], combinations of anticoagulants and antiplatelet agents such as apixaban, aspirin, and warfarin [FAERS-CASE:26537206], and cases of aspirin overdose or toxicity alongside other cardiovascular medications [FAERS-CASE:26846395].\n\nLimitations:\n- Spontaneous safety reports in FAERS represent unverified observations and should not automatically be interpreted as proof of causality.\n- Much of the evidence regarding cirrhosis preventive care and complications is based on low-certainty data [PMID:42831646].",
+            "retrieved_documents": [
+                {
+                    "source": "pubmed",
+                    "citation": "PMID:42831954",
+                    "title": "Hourly Blood Urea Nitrogen Trajectories and ICU Mortality Risk in Critically Ill Patients with Gastrointestinal Bleeding: A Multicenter Retrospective Cohort Study.",
+                    "score": null
+                },
+                {
+                    "source": "faers",
+                    "citation": "FAERS-CASE:26841622",
+                    "title": "",
+                    "score": null
+                },
+                {
+                    "source": "faers",
+                    "citation": "FAERS-CASE:26658933",
+                    "title": "",
+                    "score": null
+                },
+                {
+                    "source": "pubmed",
+                    "citation": "PMID:42831646",
+                    "title": "ACG Clinical Guideline: Preventive Care for Patients With Cirrhosis.",
+                    "score": null
+                },
+                {
+                    "source": "faers",
+                    "citation": "FAERS-CASE:26891796",
+                    "title": "",
+                    "score": null
+                },
+                {
+                    "source": "pubmed",
+                    "citation": "PMID:42833283",
+                    "title": "EUS-guided angiotherapy with cyanoacrylate injection as a treatment for refractory malignant gastrointestinal hemorrhage: a case report.",
+                    "score": null
+                },
+                {
+                    "source": "faers",
+                    "citation": "FAERS-CASE:26537206",
+                    "title": "",
+                    "score": null
+                },
+                {
+                    "source": "faers",
+                    "citation": "FAERS-CASE:26846395",
+                    "title": "",
+                    "score": null
+                },
+                {
+                    "source": "pubmed",
+                    "citation": "PMID:42831044",
+                    "title": "Routine versus deferred percutaneous coronary intervention in patients undergoing transcatheter aortic valve implantation: a frequentist and Bayesian meta-analysis of randomized trials with trial sequential analysis.",
+                    "score": null
+                },
+                {
+                    "source": "pubmed",
+                    "citation": "PMID:42832398",
+                    "title": "Piezo 1 and Shear-induced Erythrocyte Transformation and Procoagulant Activity: Implication for LVAD-Induced Bleeding.",
+                    "score": null
+                }
+            ]
+        }
+    ]
+}

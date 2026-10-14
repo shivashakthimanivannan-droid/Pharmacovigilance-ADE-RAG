@@ -1,0 +1,61 @@
+{
+    "total_test_queries": 3,
+    "successful_queries": 3,
+    "average_relevance_rate": 0.633,
+    "results": [
+        {
+            "query": "What are the risks of combining warfarin with aspirin?",
+            "status": "SUCCESS",
+            "total_retrieved": 10,
+            "relevant_documents": 10,
+            "relevance_rate": 1.0,
+            "matched_terms": [
+                "anticoagulant",
+                "antiplatelet",
+                "aspirin",
+                "bleeding",
+                "hemorrhage",
+                "warfarin"
+            ],
+            "source_coverage": {
+                "PubMed": 5,
+                "FAERS": 5,
+                "Other": 0
+            }
+        },
+        {
+            "query": "What adverse events are associated with anticoagulant therapy?",
+            "status": "SUCCESS",
+            "total_retrieved": 10,
+            "relevant_documents": 4,
+            "relevance_rate": 0.4,
+            "matched_terms": [
+                "anticoagulant",
+                "bleeding",
+                "hemorrhage"
+            ],
+            "source_coverage": {
+                "PubMed": 5,
+                "FAERS": 5,
+                "Other": 0
+            }
+        },
+        {
+            "query": "What are the safety concerns related to gastrointestinal bleeding?",
+            "status": "SUCCESS",
+            "total_retrieved": 10,
+            "relevant_documents": 5,
+            "relevance_rate": 0.5,
+            "matched_terms": [
+                "bleeding",
+                "gastrointestinal",
+                "hemorrhage"
+            ],
+            "source_coverage": {
+                "PubMed": 5,
+                "FAERS": 5,
+                "Other": 0
+            }
+        }
+    ]
+}

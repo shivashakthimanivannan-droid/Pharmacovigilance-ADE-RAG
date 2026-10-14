@@ -1,0 +1,39 @@
+# API keys and secrets
+.env
+.env.*
+!.env.example
+
+# Python environment
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Large datasets
+data/raw/
+data/processed/
+*.csv
+*.zip
+
+# Model weights and indexes
+*.bin
+*.pt
+*.pth
+*.safetensors
+chroma_db/
+faiss_index/
+
+# Generated evaluation reports
+evaluation/reports/
+
+# Local files
+project_files.txt
+project_structure.txt
+
+# Editor and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

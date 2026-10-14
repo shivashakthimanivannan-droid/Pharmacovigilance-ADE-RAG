@@ -1,0 +1,281 @@
+{
+  "summary": {
+    "test_queries": 3,
+    "successful_queries": 3,
+    "failed_queries": 0,
+    "success_rate": 1.0,
+    "average_claim_support": 0.5142028985507247,
+    "average_citation_coverage": 0.7031884057971015,
+    "average_citation_validity": 1.0,
+    "average_ade_grounding": 1.0,
+    "average_grounding_score": 0.7314782608695652,
+    "source_distribution": {
+      "PubMed": 16,
+      "FAERS": 14,
+      "Other": 0
+    }
+  },
+  "queries": [
+    {
+      "query": "What are the risks of combining warfarin with aspirin?",
+      "success": true,
+      "generation_status": "success",
+      "evidence_count": 10,
+      "source_distribution": {
+        "PubMed": 6,
+        "FAERS": 4,
+        "Other": 0
+      },
+      "analysis": "## SAFETY SUMMARY\n\nThe retrieved evidence does not contain specific studies evaluating the risks of combining warfarin with aspirin. However, retrieved FAERS records contain cases where both Coumadin (warfarin) and aspirin are listed among concomitant medications [Evidence 3, Evidence 5, Evidence 9, Evidence 10]. Additionally, retrieved surgical and patient safety data mention warfarin alongside other anticoagulant or antiplatelet agents (such as direct oral anticoagulants or dual antiplatelet therapy) in the context of perioperative outcomes or bleeding complications [Evidence 4], but specific combination risks for warfarin and aspirin together are not detailed.\n\n## RELEVANT EVIDENCE\n\n- Retrieved FAERS reports list Coumadin (warfarin) and aspirin together among reported medication profiles [Evidence 3, Evidence 5, Evidence 9, Evidence 10].\n- Retrospective surgical data examining patients taking preoperative anticoagulants or antiplatelet agents (including warfarin) report outcomes such as operative mortality and bleeding [Evidence 4].\n\n## POTENTIAL ADVERSE EVENTS\n\n### Explicitly Reported Events\n\n- Rectal haemorrhage was reported in a FAERS case profile listing multiple medications including Coumadin (warfarin) and aspirin [Evidence 3].\n\n### Automated ADE Signals\n\n- bleeding\n- dizziness\n- infection\n- cardiac event\n- thrombosis\n- hypertension\n\nAutomated ADE detection represents signals only and does not confirm adverse drug reactions.\n\n### Interpretation\n\nFAERS data cannot establish causality. The retrieved evidence does not provide an evaluation of the specific risks resulting from the combination of warfarin and aspirin.\n\n## DRUG-DRUG INTERACTION CONCERNS\n\nThe retrieved evidence does not contain specific information regarding a drug-drug interaction between warfarin and aspirin.\n\n## MONITORING CONSIDERATIONS\n\nThe retrieved evidence does not establish specific monitoring recommendations.\n\n## EVIDENCE LIMITATIONS\n\n- FAERS cannot establish causality.\n- Automated ADE detection represents signals rather than confirmed ADRs.\n- Retrieved evidence may be insufficient to answer some aspects of the query.",
+      "ade_results": {
+        "status": "events_detected",
+        "findings": [
+          {
+            "adverse_event": "bleeding",
+            "matched_terms": [
+              "bleeding",
+              "haemorrhage",
+              "gastrointestinal bleeding",
+              "rectal haemorrhage"
+            ]
+          },
+          {
+            "adverse_event": "dizziness",
+            "matched_terms": [
+              "dizziness"
+            ]
+          },
+          {
+            "adverse_event": "infection",
+            "matched_terms": [
+              "infection"
+            ]
+          },
+          {
+            "adverse_event": "cardiac event",
+            "matched_terms": [
+              "myocardial infarction"
+            ]
+          },
+          {
+            "adverse_event": "thrombosis",
+            "matched_terms": [
+              "thromboembolism"
+            ]
+          },
+          {
+            "adverse_event": "hypertension",
+            "matched_terms": [
+              "hypertension"
+            ]
+          }
+        ]
+      },
+      "claims": 5,
+      "supported_claims": 2,
+      "unsupported_claims": 3,
+      "claim_support": 0.4,
+      "citation_coverage": 0.6,
+      "citation_validity": 1.0,
+      "ade_grounding": 1.0,
+      "faers_causality": "PASS",
+      "overall_grounding": 0.6600000000000001,
+      "unsupported_claim_details": [
+        "However, retrieved FAERS records contain cases where both Coumadin (warfarin) and aspirin are listed among concomitant medications [Evidence 3, Evidence 5, Evidence 9, Evidence 10].",
+        "Additionally, retrieved surgical and patient safety data mention warfarin alongside other anticoagulant or antiplatelet agents (such as direct oral anticoagulants or dual antiplatelet therapy) in the context of perioperative outcomes or bleeding complications [Evidence 4], but specific combination risks for warfarin and aspirin together are not detailed.",
+        "Retrieved FAERS reports list Coumadin (warfarin) and aspirin together among reported medication profiles [Evidence 3, Evidence 5, Evidence 9, Evidence 10]."
+      ],
+      "invalid_citations": []
+    },
+    {
+      "query": "What adverse events are associated with anticoagulant therapy?",
+      "success": true,
+      "generation_status": "success",
+      "evidence_count": 10,
+      "source_distribution": {
+        "PubMed": 8,
+        "FAERS": 2,
+        "Other": 0
+      },
+      "analysis": "## SAFETY SUMMARY\n\n- Anticoagulant therapy is associated with hemorrhagic risk and bleeding complications [Evidence 1, Evidence 3].\n- In patients undergoing surgery while on anticoagulants or related agents, complications such as bleeding and mortality have been observed [Evidence 6].\n- FAERS data cannot establish causality.\n- Automated ADE detection represents signals only and does not confirm adverse drug reactions.\n\n## RELEVANT EVIDENCE\n\n- Anticoagulation in cancer patients with atrial fibrillation creates a clinical scenario with increased thromboembolic and hemorrhagic risk [Evidence 1].\n- Direct oral anticoagulants (DOACs) are associated with risks including major and intracranial bleeding [Evidence 1].\n- In a case report of a patient undergoing mandatory anticoagulation for ECMO support following acute pulmonary embolism, management was complicated by ongoing postoperative bleeding [Evidence 3].\n- Patients undergoing first-time surgery for acute Type A aortic dissection while preoperatively on DOACs, warfarin, or dual antiplatelet therapy showed increased mortality and bleeding complications [Evidence 6].\n- Reoperation for bleeding was higher for patients on DOACs and dual antiplatelet therapy undergoing surgery for acute Type A aortic dissection [Evidence 6].\n- The retrieved FAERS report contains reports of deep vein thrombosis, epistaxis, gastrointestinal haemorrhage, haemorrhage intracranial, pericardial haemorrhage, pulmonary embolism, and rectal haemorrhage among patients receiving specified anticoagulant and immunotherapy agents [Evidence 10].\n\n## POTENTIAL ADVERSE EVENTS\n\n### Explicitly Reported Events\n\n- Hemorrhagic risk and bleeding [Evidence 1]\n- Major bleeding [Evidence 1]\n- Intracranial bleeding [Evidence 1]\n- Postoperative bleeding [Evidence 3]\n- Mortality [Evidence 1, Evidence 6]\n- Reoperation for bleeding [Evidence 6]\n- Epistaxis (reported in a FAERS case record) [Evidence 10]\n- Gastrointestinal haemorrhage (reported in a FAERS case record) [Evidence 10]\n- Haemorrhage intracranial (reported in a FAERS case record) [Evidence 10]\n- Pericardial haemorrhage (reported in a FAERS case record) [Evidence 10]\n- Rectal haemorrhage (reported in a FAERS case record) [Evidence 10]\n\n### Automated ADE Signals\n\n- bleeding\n- haemorrhage\n- gastrointestinal haemorrhage\n- intracranial bleeding\n- rectal haemorrhage\n- infection\n- stroke\n- thrombosis\n- thromboembolism\n- deep vein thrombosis\n- pulmonary embolism\n- hypotension\n- hypertension\n- drug interaction\n- interaction\n\nAutomated ADE detection represents signals only and does not confirm adverse drug reactions.\n\n### Interpretation\n\nRetrieved evidence discusses bleeding and hemorrhagic risks associated with anticoagulant therapy, particularly in specific clinical settings such as cancer, surgery, or mechanical support [Evidence 1, Evidence 3, Evidence 6]. The retrieved FAERS reports contain observational safety data and cannot be used to establish causality [Evidence 8, Evidence 10].\n\n## DRUG-DRUG INTERACTIONS\n\n- Drug-drug interactions (DDIs) are noted as a factor to be considered when managing anticoagulant treatment in cancer patients [Evidence 1].\n- Potential direct oral anticoagulant use is debated in the case of strong drug-drug interactions [Evidence 1].\n- A retrieved FAERS report mentions an interaction between apixaban and levetiracetam [Evidence 8].\n\n## MONITORING CONSIDERATIONS\n\nThe retrieved evidence does not establish specific monitoring recommendations.\n\n## EVIDENCE LIMITATIONS\n\n- FAERS cannot establish causality.\n- Automated ADE detection represents signals rather than confirmed ADRs.\n- Retrieved evidence may be insufficient to answer some aspects of the query, as evidence guiding anticoagulation decisions in certain populations (such as cancer patients) derives largely from post hoc analyses and observational studies rather than being exhaustive [Evidence 1].",
+      "ade_results": {
+        "status": "events_detected",
+        "findings": [
+          {
+            "adverse_event": "bleeding",
+            "matched_terms": [
+              "bleeding",
+              "haemorrhage",
+              "gastrointestinal haemorrhage",
+              "intracranial bleeding",
+              "rectal haemorrhage"
+            ]
+          },
+          {
+            "adverse_event": "infection",
+            "matched_terms": [
+              "infection"
+            ]
+          },
+          {
+            "adverse_event": "stroke",
+            "matched_terms": [
+              "stroke"
+            ]
+          },
+          {
+            "adverse_event": "thrombosis",
+            "matched_terms": [
+              "thrombosis",
+              "thromboembolism",
+              "deep vein thrombosis",
+              "pulmonary embolism"
+            ]
+          },
+          {
+            "adverse_event": "hypotension",
+            "matched_terms": [
+              "hypotension"
+            ]
+          },
+          {
+            "adverse_event": "hypertension",
+            "matched_terms": [
+              "hypertension"
+            ]
+          },
+          {
+            "adverse_event": "drug interaction",
+            "matched_terms": [
+              "drug interaction",
+              "interaction"
+            ]
+          }
+        ]
+      },
+      "claims": 23,
+      "supported_claims": 18,
+      "unsupported_claims": 5,
+      "claim_support": 0.782608695652174,
+      "citation_coverage": 0.8695652173913043,
+      "citation_validity": 1.0,
+      "ade_grounding": 1.0,
+      "faers_causality": "PASS",
+      "overall_grounding": 0.8804347826086958,
+      "unsupported_claim_details": [
+        "Anticoagulant therapy is associated with hemorrhagic risk and bleeding complications [Evidence 1, Evidence 3].",
+        "The retrieved FAERS report contains reports of deep vein thrombosis, epistaxis, gastrointestinal haemorrhage, haemorrhage intracranial, pericardial haemorrhage, pulmonary embolism, and rectal haemorrhage among patients receiving specified anticoagulant and immunotherapy agents [Evidence 10].",
+        "Mortality [Evidence 1, Evidence 6]",
+        "Epistaxis (reported in a FAERS case record) [Evidence 10]",
+        "The retrieved FAERS reports contain observational safety data and cannot be used to establish causality [Evidence 8, Evidence 10]."
+      ],
+      "invalid_citations": []
+    },
+    {
+      "query": "What are the safety concerns related to gastrointestinal bleeding?",
+      "success": true,
+      "generation_status": "success",
+      "evidence_count": 10,
+      "source_distribution": {
+        "PubMed": 2,
+        "FAERS": 8,
+        "Other": 0
+      },
+      "analysis": "## SAFETY SUMMARY\n\nThe retrieved evidence highlights several clinical contexts and reports related to gastrointestinal bleeding:\n- A case of gastric ulcer bleeding following failed over-the-scope clip (OTSC) treatment was successfully rescued using endoscopic double-layer nylon rope ligation [Evidence 1].\n- A retrospective study found that proton pump inhibitor (PPI) use was not associated with reduced overall gastrointestinal bleeding risk in acute ischemic stroke patients receiving dual antiplatelet therapy [Evidence 2], though subgroup analyses indicated an increased risk associated with PPI use in non-endovascular therapy patients, particularly those with posterior circulation infarction [Evidence 2].\n- Various individual observational reports in FAERS mention gastrointestinal bleeding or upper/lower gastrointestinal haemorrhage associated with drug combinations or polypharmacy (e.g., involving diclofenac, naproxen, aspirin, clopidogrel, edoxaban, dabigatran, sunitinib, capecitabine, gemcitabine, and others) [Evidence 3, Evidence 4, Evidence 5, Evidence 6, Evidence 7, Evidence 8, Evidence 9, Evidence 10].\n\n## RELEVANT EVIDENCE\n\n- Endoscopic double-layer nylon rope ligation was reported as a safe and effective rescue therapy for gastric ulcer bleeding after OTSC failure [Evidence 1].\n- Proton pump inhibitor use was not associated with a reduced overall gastrointestinal bleeding risk in acute ischemic stroke patients treated with dual antiplatelet therapy [Evidence 2].\n- Subgroup analyses in dual antiplatelet-treated stroke patients showed an increased gastrointestinal bleeding risk associated with PPI use in non-endovascular therapy patients and those with posterior circulation infarction [Evidence 2].\n- Retrieved FAERS reports contain individual cases of gastrointestinal bleeding, upper gastrointestinal haemorrhage, lower gastrointestinal haemorrhage, melena, and haematochezia occurring alongside various pharmacological treatments and risk factors [Evidence 3, Evidence 4, Evidence 5, Evidence 6, Evidence 7, Evidence 8, Evidence 9, Evidence 10].\n\n## POTENTIAL ADVERSE EVENTS\n\n### Explicitly Reported Events\n\n- Gastrointestinal bleeding / Gastrointestinal haemorrhage [Evidence 5, Evidence 8, Evidence 10]\n- Upper gastrointestinal haemorrhage [Evidence 3, Evidence 6, Evidence 7]\n- Lower gastrointestinal haemorrhage [Evidence 4, Evidence 9]\n- Bleeding gastric ulcer [Evidence 1]\n- Melena [Evidence 1, Evidence 3]\n- Haematochezia [Evidence 4]\n- Anaemia / Blood loss anaemia [Evidence 5, Evidence 7]\n- Shock haemorrhagic [Evidence 4]\n- Hypotension [Evidence 3, Evidence 6, Evidence 8, Evidence 10]\n- Nausea [Evidence 3]\n- Vomiting [Evidence 3]\n- Dizziness [Evidence 1]\n- Coagulopathy [Evidence 5]\n- Thrombocytopenia [Evidence 9]\n- Diarrhoea [Evidence 10]\n- Fistula [Evidence 10]\n- Thrombosis [Evidence 10]\n\n### Automated ADE Signals\n\n- bleeding\n- haemorrhage\n- gi bleeding\n- anaemia\n- stroke\n- drug interaction\n\nAutomated ADE detection represents signals only and does not confirm adverse drug reactions.\n\n### Interpretation\n\nFAERS reports should not be interpreted as proof of causality. The retrieved evidence includes case reports and retrospective findings documenting gastrointestinal bleeding events in various clinical settings and treatment regimens.\n\n## DRUG-DRUG INTERACTION CONCERNS\n\nRetrieved FAERS records contain mentions of \"Drug interaction\" as a preferred term in cases involving multiple concurrent medications (such as diclofenac, enalapril, lorazepam, naproxen, sertraline, and simvastatin or omeprazole) [Evidence 3, Evidence 6], but the retrieved text does not detail specific interaction mechanisms.\n\n## MONITORING CONSIDERATIONS\n\nThe retrieved evidence does not establish specific monitoring recommendations.\n\n## EVIDENCE LIMITATIONS\n\n- FAERS data cannot establish causality.\n- FAERS reports should not be interpreted as proof of causality.\n- Automated ADE detection represents signals rather than confirmed ADRs.\n- Automated ADE signals are not confirmed adverse drug reactions.\n- The retrieved evidence is insufficient to answer some aspects of the query.",
+      "ade_results": {
+        "status": "events_detected",
+        "findings": [
+          {
+            "adverse_event": "bleeding",
+            "matched_terms": [
+              "bleeding",
+              "haemorrhage",
+              "gastrointestinal bleeding",
+              "gastrointestinal haemorrhage",
+              "gi bleeding",
+              "haematochezia",
+              "melena"
+            ]
+          },
+          {
+            "adverse_event": "anemia",
+            "matched_terms": [
+              "anaemia"
+            ]
+          },
+          {
+            "adverse_event": "nausea",
+            "matched_terms": [
+              "nausea"
+            ]
+          },
+          {
+            "adverse_event": "vomiting",
+            "matched_terms": [
+              "vomiting"
+            ]
+          },
+          {
+            "adverse_event": "dizziness",
+            "matched_terms": [
+              "dizziness"
+            ]
+          },
+          {
+            "adverse_event": "stroke",
+            "matched_terms": [
+              "stroke"
+            ]
+          },
+          {
+            "adverse_event": "thrombosis",
+            "matched_terms": [
+              "thrombosis"
+            ]
+          },
+          {
+            "adverse_event": "hypotension",
+            "matched_terms": [
+              "hypotension"
+            ]
+          },
+          {
+            "adverse_event": "drug interaction",
+            "matched_terms": [
+              "drug interaction",
+              "interaction"
+            ]
+          }
+        ]
+      },
+      "claims": 25,
+      "supported_claims": 9,
+      "unsupported_claims": 16,
+      "claim_support": 0.36,
+      "citation_coverage": 0.64,
+      "citation_validity": 1.0,
+      "ade_grounding": 1.0,
+      "faers_causality": "PASS",
+      "overall_grounding": 0.6539999999999999,
+      "unsupported_claim_details": [
+        "Various individual observational reports in FAERS mention gastrointestinal bleeding or upper/lower gastrointestinal haemorrhage associated with drug combinations or polypharmacy (e.g., involving diclofenac, naproxen, aspirin, clopidogrel, edoxaban, dabigatran, sunitinib, capecitabine, gemcitabine, and others) [Evidence 3, Evidence 4, Evidence 5, Evidence 6, Evidence 7, Evidence 8, Evidence 9, Evidence 10].",
+        "Retrieved FAERS reports contain individual cases of gastrointestinal bleeding, upper gastrointestinal haemorrhage, lower gastrointestinal haemorrhage, melena, and haematochezia occurring alongside various pharmacological treatments and risk factors [Evidence 3, Evidence 4, Evidence 5, Evidence 6, Evidence 7, Evidence 8, Evidence 9, Evidence 10].",
+        "Gastrointestinal bleeding / Gastrointestinal haemorrhage [Evidence 5, Evidence 8, Evidence 10]",
+        "Upper gastrointestinal haemorrhage [Evidence 3, Evidence 6, Evidence 7]",
+        "Lower gastrointestinal haemorrhage [Evidence 4, Evidence 9]",
+        "Melena [Evidence 1, Evidence 3]",
+        "Haematochezia [Evidence 4]",
+        "Anaemia / Blood loss anaemia [Evidence 5, Evidence 7]",
+        "Hypotension [Evidence 3, Evidence 6, Evidence 8, Evidence 10]",
+        "Nausea [Evidence 3]",
+        "Vomiting [Evidence 3]",
+        "Dizziness [Evidence 1]",
+        "Thrombocytopenia [Evidence 9]",
+        "Diarrhoea [Evidence 10]",
+        "Fistula [Evidence 10]",
+        "Retrieved FAERS records contain mentions of \"Drug interaction\" as a preferred term in cases involving multiple concurrent medications (such as diclofenac, enalapril, lorazepam, naproxen, sertraline, and simvastatin or omeprazole) [Evidence 3, Evidence 6], but the retrieved text does not detail specific interaction mechanisms."
+      ],
+      "invalid_citations": []
+    }
+  ]
+}
